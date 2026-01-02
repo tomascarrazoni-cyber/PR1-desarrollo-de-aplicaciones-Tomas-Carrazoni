@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Respira - App de Respiración</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Contenedor principal -->
+  <div id="app">
+    <!-- Canvas de p5.js se insertará aquí -->
+    <div id="canvas-container"></div>
+    
+    <!-- Panel de controles -->
+    <div id="controls">
+      <h1>Respira</h1>
+      
+      <!-- Indicador de fase -->
+      <div id="phase-indicator">
+        <p id="phase-text">Presiona Iniciar</p>
+      </div>
+      
+      <!-- Configuración de tiempo -->
+      <div id="time-config">
+        <label for="inhale-time">Inhalar (seg):</label>
+        <input type="number" id="inhale-time" value="4" min="2" max="8">
+        
+        <label for="hold-time">Mantener (seg):</label>
+        <input type="number" id="hold-time" value="4" min="0" max="8">
+        
+        <label for="exhale-time">Exhalar (seg):</label>
+        <input type="number" id="exhale-time" value="4" min="2" max="8">
+      </div>
+      
+      <!-- Botones de control -->
+      <div id="buttons">
+        <button id="start-btn" class="btn btn-primary">Iniciar</button>
+        <button id="stop-btn" class="btn btn-secondary" disabled>Detener</button>
+        <button id="reset-stats-btn" class="btn btn-tertiary">Resetear Stats</button>
+      </div>
+      
+      <!-- Estadísticas -->
+      <div id="stats">
+        <h3>Estadísticas</h3>
+        <p>Sesiones completadas: <span id="sessions-count">0</span></p>
+        <p>Ciclos totales: <span id="cycles-count">0</span></p>
+        <p>Tiempo total: <span id="total-time">0</span> min</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "appId": "com.respira.app",
+  "appName": "Respira",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
